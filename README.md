@@ -6,6 +6,7 @@ Java RESTful API criada para o bootcamp santander java backend 2023
 ```mermaid
 classDiagram
   class User {
+    -id: Long
     -name: String
     -account: Account
     -features: Feature[]
@@ -13,20 +14,24 @@ classDiagram
     -news: News[]
   }
   class Account {
+    -id: Long
     -Number: String
     -Agency: String
-    -Balance: Double
-    -Limit: Double
+    -Balance: BigDecimal
+    -Limit: BigDecimal
   }
   class Feature {
+    -id: Long
     -icon: String
     -description: String
   }
   class Card {
+    -id: Long
     -Number: String
-    -Limit: Double
+    -Limit: BigDecimal
   }
   class News {
+    -id: Long
     -icon: String
     -description: String
   }
